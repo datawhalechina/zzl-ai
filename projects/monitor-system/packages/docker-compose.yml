@@ -1,0 +1,64 @@
+version: '3.7'
+services:
+  zookeeper:
+    image: bitnami/zookeeper:3.6.0
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    ports:
+      - "2181:2181"
+    networks:
+      - elk
+
+  kafka:
+    image: bitnami/kafka:2.5.0
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    networks:
+      - elk
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+    networks:
+      - elk
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.8.0
+    ports:
+      - "5601:5601"
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+  server:
+    build: ./server
+    ports:
+      - "3000:3000"
+    environment:
+      KAFKA_BROKER: kafka:9092
+      ELASTICSEARCH_HOST: http://elasticsearch:9200
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: xiaoju
+      DB_PASSWORD: xiaojupassword
+      DB_NAME: mydatabase
+    depends_on:
+      - kafka
+      - elasticsearch
+    networks:
+      - elk
+
+networks:
+  elk:
+    driver: bridge

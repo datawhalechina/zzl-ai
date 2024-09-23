@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    [
+      "build-plugin-fusion",
+      {
+        "themePackage": "@alifd/theme-ice-green"
+      }
+    ],
+    [
+      "build-plugin-moment-locales",
+      {
+        "locales": [
+          "zh-cn"
+        ]
+      }
+    ]
+  ],
+  "proxy": {
+    "/api/": {
+      "target": "http://localhost:7001",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api": "" }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "基于 fusion 的简历管理后台",
+  "dependencies": {
+    "@alifd/next": "^1.27.18",
+    "@alifd/theme-design-pro": "^0.x",
+    "ahooks": "^3.8.0",
+    "bizcharts": "^4.0.14",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@iceworks/spec": "^1.0.0",
+    "build-plugin-fusion": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "eslint": "^9.8.0",
+    "ice.js": "^2.6.9",
+    "prettier": "^3.3.3",
+    "stylelint": "^16.8.1"
+  },
+  "scripts": {
+    "start": "icejs start",
+    "build": "icejs build",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint src --ext .ts,.tsx --max-warnings=0 --fix",
+    "prettier": "prettier --write \"src/**/*.[j|t]s[x]|./*.[j|t]s[x]\"",
+    "fix": "npx eslint src --fix",
+    "stylelint": "stylelint ./**/*.scss"
+  },
+  "ideMode": {
+    "name": "ice-react"
+  },
+  "iceworks": {
+    "type": "react",
+    "adapter": "adapter-react-v3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

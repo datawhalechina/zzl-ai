@@ -1,0 +1,27 @@
+{
+  "name": "nlts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "nlts": "bin/nlts.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "XIAOJUSURVEY",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.5",
+    "axios": "^1.7.3",
+    "cli-color": "^2.0.4",
+    "cli-table": "^0.3.11",
+    "compare-versions": "^6.1.1",
+    "lodash": "^4.17.21",
+    "terminal-link": "^1.0.0"
+  },
+  "devDependencies": {
+    "cowsay": "^1.6.0"
+  },
+  "description": ""
+}

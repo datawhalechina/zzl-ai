@@ -1,0 +1,87 @@
+{ 
+    "id": 11,
+    "name": "测试公式",
+    "industry":"测试行业",
+    "topNav":{
+        "titleColor":"#00F",
+        "buttonColor":"#000",
+        "background":"#fff00",
+        "type":"0",
+        "title":"topNav"
+    },
+    "bottomNav":{
+        "status":"0",
+        "activeIndex":"0",
+        "color":"#000FFF",
+        "activeColor":"#3351E7",
+        "background":"#fff",
+        "navList":[
+            {
+                "name":"首页",
+                "link":"www.baidu.con",
+                "icon":"pic",
+                "activeIcon":"pic"
+                }]},
+    "pages": [
+        {
+            "id": 2,
+            "stId": 8,
+            "name": "新建页面BBB",
+            "isIndex": 1,
+            "content": {
+                "background": "#F1F5E5",
+                "title": "新建页面DDDD"
+            },
+            "components": [
+                {
+                    "id": 2,
+                    "pageId": 6,
+                    "name": "PicCom",
+                    "description": "★★★★★★打好三大攻坚战。精准研判可能出现的主要风险点，结★★★★★★打★★★★★★打合西部地区实际，进一步完善体制机制，拿出改革创新举措。",
+                    "content": {
+                        "name": "PicCom",
+                        "type": 0,
+                        "version": "v1.0.0",
+                        "description": "文dsaf本"
+                    },
+                    "style": {
+                        "text": "PicCom"
+                    },
+                    "event": {
+                        "text": "测试3333"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "stId": 8,
+            "name": "新建页★★★★★★打E",
+            "isIndex": 0,
+            "content": {
+                "background": "#F1F5F5",
+                " title": "新建页面"
+            },
+            "components": [
+                {
+                    "id": 2,
+                    "pageId": 6,
+                    "name": "PicCom",
+                    "description": "★★好三大攻坚战。精准研判可能出★要风险点，结合西部地区实际，进一步完善体★★机制，拿出改革创新举措。",
+                    "content": {
+                        "name": "PicCom",
+                        "type": 0,
+                        "version": "v1.0.0",
+                        "description": "文本"
+                    },
+                    "style": {
+                        "text": "PicCom"
+                    },
+                    "event": {
+                        "text": "测试"
+                    }
+                }
+            ]
+        }
+    ]
+}

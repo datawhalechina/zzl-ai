@@ -1,0 +1,10 @@
+@import "~@alifd/next/variables.scss";
+.FormTable {
+  padding-bottom: 84px;
+}
+
+.Card:not(:first-child) {
+  margin-top: 20px;
+  border: none;
+}
+

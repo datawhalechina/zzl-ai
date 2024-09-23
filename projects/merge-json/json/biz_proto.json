@@ -1,0 +1,78 @@
+{
+    "version": "1.0.0",
+    "baseConf": {
+      "begTime": "",
+      "endTime": "",
+      "language": "chinese",
+      "showVoteProcess": "allow",
+      "tLimit": 0,
+      "answerBegTime": "",
+      "answerEndTime": "",
+      "answerLimitTime": 0
+    },
+    "dataConf": {
+      "dataList": [
+        {
+          "field": "data560",
+          "showIndex": false,
+          "showType": false,
+          "showSpliter": true,
+          "type": "text",
+          "title": "姓名",
+          "placeholder": "",
+          "valid": "",
+          "isRequired": true,
+          "minNum": "",
+          "maxNum": "",
+          "starStyle": "star",
+          "starMin": 1,
+          "starMax": 5,
+          "rangeConfig": {},
+          "npsMin": 0,
+          "npsMax": 0,
+          "numberRange": {
+            "min": { "placeholder": "0", "value": 0 },
+            "max": { "placeholder": "1000", "value": 1000 }
+          },
+          "title": "姓名",
+          "othersKeyMap": {}
+        }
+      ]
+    },
+    "bannerConf": {
+      "titleConfig": {
+        "mainTitle": "<h3 style='text-align: center'>欢迎填写问卷</h3>",
+        "subTitle": "<p>为了给您提供更好的服务，希望您能抽出几分钟时间，将您的感受和建议告诉我们，<span style='color: rgb(204, 0, 0)'>期待您的参与！</span></p>",
+        "applyTitle": ""
+      },
+      "bannerConfig": {
+        "bgImage": "",
+        "bgImageAllowJump": false,
+        "bgImageJumpLink": "",
+        "videoLink": "",
+        "postImg": ""
+      }
+    },
+    "bottomConf": {
+      "logoImage": "",
+      "logoImageWidth": "28%"
+    },
+    "skinConf": {
+      "skinColor": "#4a4c5b",
+      "inputBgColor": "ffffff"
+    },
+    "submitConf": {
+      "submitTitle": "",
+      "msgContent": {},
+      "confirmAgain": {
+        "isAgain": true
+      },
+      "buttonList": [
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "link": ""
+    }
+  }

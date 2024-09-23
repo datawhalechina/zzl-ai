@@ -1,0 +1,36 @@
+{
+  "name": "puppeteer-read",
+  "version": "1.0.0",
+  "description": "crawler",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node src/index.js",
+    "lint:js": "standard index.js && standard lib/*.js --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:js",
+      "pre-push": "npm run lint:js"
+    }
+  },
+  "devDependencies": {
+    "husky": "^9.1.4",
+    "standard": "^17.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "crawler"
+  ],
+  "author": "XIAOJUSURVEY",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "puppeteer": "^22.15.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}

@@ -1,0 +1,15 @@
+@import "~@alifd/next/variables.scss";
+
+.fixedBottom{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 66px;
+  margin-right: -$shell-dark-content-paddingLeft;
+  margin-left: -$shell-dark-content-paddingLeft;
+  background: #fff;
+  box-shadow: $shadow-3-up;
+  padding: 10px 0;
+}

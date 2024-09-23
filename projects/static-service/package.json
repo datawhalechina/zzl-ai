@@ -1,0 +1,27 @@
+{
+  "name": "static-service",
+  "version": "1.0.0",
+  "description": "static server",
+  "main": "index.js",
+  "scripts": {
+    "lint:js": "standard index.js && standard lib/*.js --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:js",
+      "pre-push": "npm run lint:js"
+    }
+  },
+  "devDependencies": {
+    "husky": "^9.1.4",
+    "standard": "^17.1.0"
+  },
+  "keywords": [
+    "static",
+    "server"
+  ],
+  "author": "XIAOJUSURVEY",
+  "license": "ISC"
+}

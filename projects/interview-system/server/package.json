@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "highcross server template",
+  "main": "index.js",
+  "egg": {
+    "declarations": true
+  },
+  "scripts": {
+    "dev": "egg-bin dev --port 7001",
+    "debug": "egg-bin debug --inpsect=9229",
+    "db:c": "npx sequelize db:create",
+    "db:d": "npx sequelize db:drop",
+    "db:m": "npx sequelize db:migrate",
+    "db:u": "npx sequelize db:migrate:undo",
+    "db:u:all": "npx sequelize db:migrate:undo:all",
+    "db:u:name": "npx sequelize db:migrate:undo --name",
+    "db:g": "npx sequelize migration:generate --name"
+  },
+  "keywords": [],
+  "author": "XIAOJUSURVEY",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dayjs": "^1.9.4",
+    "egg": "^3.27.1",
+    "egg-sequelize": "^6.0.0",
+    "egg-swagger-doc": "^2.3.2",
+    "egg-validate": "^2.0.2",
+    "humps": "^2.0.1",
+    "mysql2": "^3.11.0",
+    "user-agent": "^1.0.4"
+  },
+  "devDependencies": {
+    "egg-bin": "^6.10.0",
+    "sequelize-cli": "^6.2.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "video-statistics-tool",
+  "version": "1.0.0",
+  "description": "video time count",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:js",
+      "pre-push": "npm run lint:js"
+    }
+  },
+  "keywords": [
+    "video",
+    "time",
+    "count"
+  ],
+  "author": "XIAOJUSURVEY",
+  "license": "ISC",
+  "dependencies": {
+    "ffprobe-static": "^3.1.0",
+    "fluent-ffmpeg": "^2.1.3"
+  }
+}

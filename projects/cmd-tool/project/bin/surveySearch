@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+// 这个是 require('../index.js') 的语法糖，获取 index.js 提供的能力
+const emitter = require('..')
+
+const main = (argv) => {
+  // 如果未传入参数，直接打印指令帮助信息
+  if (!argv || !argv.length) {
+    emitter.emit('print', 'Help', 1)
+  }
+  let arg = argv[0]
+  switch (arg) {
+    case '-v':
+    case '-V':
+    case '--version':
+      emitter.emit('print','version')
+      break
+    case '-h':
+    case '-H':
+    case '--help':
+      emitter.emit('print', 'Help', 1)
+      break
+    default:
+      // 启动搜索逻辑，同时传入参数
+      emitter.emit('search', arg)
+      break
+  }
+}
+
+main(process.argv.slice(2))
+
+module.exports = main
